@@ -3,8 +3,12 @@ name = "libsqlite3"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "hellohq"
+crate-type = ["lib", "staticlib", "cdylib"]
+
 [dependencies]
-libsqlite3-sys = { version = "0.23.2", features = ["bundled"]}
+libsqlite3-sys = { version = "0.23.2", features = ["bundled"] }
 
 [build-dependencies]
 cc = "1.0"

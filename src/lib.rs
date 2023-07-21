@@ -5,7 +5,7 @@ mod bindings;
 pub fn init() {
     unsafe {
         // Init SHA1
-        let sha_init = bindings::sqlite3_sha_init as *const ();
+        let sha_init = bindings::sqlite3_crsqlite_init as *const ();
         sqlite3_auto_extension(Some(
             std::mem::transmute::<*const (), unsafe extern "C" fn()>(sha_init),
         ));
